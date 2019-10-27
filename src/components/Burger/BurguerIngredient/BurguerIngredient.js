@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './BurgerIngredient.scss';
+import classes from './BurgerIngredient.module.scss';
 
 class BurguerIngredient extends Component {
   
@@ -11,27 +11,27 @@ class BurguerIngredient extends Component {
 
     switch (this.props.type) {
       case ('bread-bottom'):
-        ingredient = <div className="BreadBottom"></div>;
+        ingredient = <div className={classes.BreadBottom}></div>;
         break;
       case ('bread-top'):
         ingredient = (
-          <div className="BreadTop">
-            <div className="Seeds1"></div>
-            <div className="Seeds2"></div>
+          <div className={classes.BreadTop}>
+            <div className={classes.Seeds1}></div>
+            <div className={classes.Seeds2}></div>
           </div>
         )
         break;
       case ('meat'):
-        ingredient = <div className="Meat"></div>;
+        ingredient = <div className={classes.Meat}></div>;
         break;
       case ('cheese'):
-        ingredient = <div className="Cheese"></div>;
+        ingredient = <div className={classes.Cheese}></div>;
         break;
       case ('salad'):
-        ingredient = <div className="Salad"></div>;
+        ingredient = <div className={classes.Salad}></div>;
         break;
       case ('bacon'):
-        ingredient = <div className="Bacon"></div>;
+        ingredient = <div className={classes.Bacon}></div>;
         break;
       default:
         ingredient = null;

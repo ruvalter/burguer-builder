@@ -1,5 +1,6 @@
 import React from 'react';
 import Aux from '../../..//hoc/AuxWrap';
+import Button from '../../UI/Button/Button';
 
 const orderSummary = (props) => { // Add curly braces when there is more than just JXS;
   const ingredientsSummary = Object.keys(props.ingredients)
@@ -18,7 +19,10 @@ const orderSummary = (props) => { // Add curly braces when there is more than ju
       <ul>
        {ingredientsSummary}
       </ul>
+      <p><strong>Total Price: {props.price}</strong></p>
       <p>Continue to checkout?</p>
+      <Button btnType="Danger" clicked={props.purchaseCancelled}>Cancel</Button>
+      <Button btnType="Success" clicked={props.purchaseContinue}>Continue</Button>
     </Aux>
   )
 };

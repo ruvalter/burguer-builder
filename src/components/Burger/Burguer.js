@@ -1,6 +1,6 @@
 import React from 'react';
 import BurguerIngredient from './BurguerIngredient/BurguerIngredient';
-import './burguer.scss';
+import classes from './Burguer.module.scss';
 
 const burguer = (props) => {
 
@@ -19,7 +19,7 @@ const burguer = (props) => {
   }
   
   return (
-    <div className="Burguer">
+    <div className={classes.Burguer}>
       <BurguerIngredient type="bread-top"/>
       {transformedIngredients}
       <BurguerIngredient type="bread-bottom"/>
