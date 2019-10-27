@@ -1,9 +1,11 @@
 import React from 'react';
 import Aux from '../../hoc/AuxWrap';
 
+import './layout.scss'
+
 const layout = (props) => (
   <Aux>
-    <div>Toolbar, SideDrawer, Backdrop</div>
+    <div className="content">Toolbar, SideDrawer, Backdrop.</div>
     <main>
       {props.children}
     </main>
